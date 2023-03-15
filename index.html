@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>APP</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <p>Inventory App using tailwind & react.js</p>
+        <span class="header-quantity">0</span>
+      </header>
+      <div class="forms">
+        <p class="toggle-category">Add new Category?</p>
+        <section class="category" hidden>
+          <h3>Add New Category</h3>
+          <form class="category-form">
+            <div>
+              <label for="title">title</label>
+              <input type="text" id="title" class="title--category" />
+            </div>
+            <div class="category-form-description">
+              <label for="description">description</label>
+              <input
+                type="text"
+                id="description"
+                class="description--category"
+              />
+            </div>
+            <div class="category-form-btns">
+              <button class="btn cancel-category-btn">Cancel</button>
+              <button class="btn add-category-btn">Add Category</button>
+            </div>
+          </form>
+        </section>
+        <section class="product">
+          <h3>Add New Product</h3>
+          <form class="product-form">
+            <div>
+              <label for="title">title</label>
+              <input type="text" id="title" class="title--product" />
+            </div>
+            <div>
+              <label for="quantity">quantity</label>
+              <input type="number" step="0" min="0" max="100" id="quantity" />
+            </div>
+            <div>
+              <label for="categories">category</label>
+              <select id="categories">
+                <!-- <option value="">select a category</option> -->
+                <!-- <option value=""></option> -->
+              </select>
+            </div>
+            <button class="btn add-new-product-btn">Add New Product</button>
+          </form>
+        </section>
+        <section class="filter-section">
+          <h4>Filters</h4>
+          <div>
+            <label for="search">search</label>
+            <input type="search" id="search" />
+          </div>
+          <div>
+            <label for="sort">sort</label>
+            <select id="sort">
+              <option selected value="latest">latest</option>
+              <option value="earliest">earliest</option>
+            </select>
+          </div>
+          <div>
+            <label for="category">category</label>
+            <select id="category">
+              <!-- <option value="all">All</option> -->
+            </select>
+          </div>
+        </section>
+        <section class="products-section">
+          <h4>ProductList</h4>
+          <div class="products">
+            <!-- <div class="product">
+              <p>react.js</p>
+              <div class="product-data">
+                <span>3/8/1401</span>
+                <span class="product--category">category</span>
+                <span class="product--quantity">0</span>
+                <button class="delete-btn">delete</button>
+              </div>
+            </div> -->
+          </div>
+        </section>
+      </div>
+    </div>
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>
